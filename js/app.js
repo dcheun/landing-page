@@ -89,4 +89,34 @@ const scrollToAnchor = (section) => {
 
 // Set sections as active
 
+const setActive = (sectionId) => {
+  for (let section of sections) {
+    if (section.id === sectionId) {
+      section.classList.add("active-section");
+    } else {
+      section.classList.remove("active-section");
+    }
+  }
+};
+
+const detectActive = () => {
+  window.addEventListener("scroll", () => {
+    const pageHeaderHeight = pageHeader.offsetHeight;
+    for (let section of sections) {
+      rect = section.getBoundingClientRect();
+      if (
+        rect.top < window.innerHeight / 2 &&
+        rect.bottom > window.innerHeight / 2 + pageHeaderHeight
+      ) {
+        if (section.classList.contains("active-section")) {
+          return;
+        }
+        setActive(section.id);
+        return;
+      }
+    }
+  });
+};
+
 buildNav();
+detectActive();
