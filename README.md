@@ -1,13 +1,11 @@
-# Landing Page Project
+# Landing Page
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+- [Information](#information)
 
-## Instructions
+## Information
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+The Landing Page is a dynamic multi-section page with functionality built primarily with javascript. It converts the static HTML/CSS into a more interactive and user friendly page by improving usability such as better navigation, a little bit of transition animation, etc.
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+Javascript is used to manipulate the DOM and add logic to the page. It takes advantage of ES6 syntax as well as aim to be efficiently written.
